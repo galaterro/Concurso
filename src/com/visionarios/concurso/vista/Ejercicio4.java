@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Dam
+ * @author Visionarios
  */
 public class Ejercicio4 {
     public Ejercicio4() {
