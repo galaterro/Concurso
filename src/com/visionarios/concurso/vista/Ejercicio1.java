@@ -41,5 +41,4 @@ public class Ejercicio1 {
         }
         return noEsDivisible;
     }
-    
 }

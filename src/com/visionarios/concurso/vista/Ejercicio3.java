@@ -5,9 +5,9 @@
  */
 package com.visionarios.concurso.vista;
 
-import com.visionarios.concurso.utils.Lector;
 import com.visionarios.concurso.utils.ManejoStrings;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -16,39 +16,27 @@ import java.util.ArrayList;
 public class Ejercicio3 {
 
     public Ejercicio3() {
-        Lector lector = new Lector();
-        ArrayList<String> casos = lector.generarCasos(4);
         
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Introduzca el primer numero: ");
-//        String entradaUsuario = sc.nextLine();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduzca el primer numero: ");
+        String entradaUsuario = sc.nextLine();
 
-        String stringNumeros[][] = null;
-        int numeros[][] = null;
-        
-        
         // 20 2
         // 30 4
         // 40 4 2
-        for (int i = 0; i < casos.size(); i++) {
-            
-//            for (int j = 0; j < ManejoStrings.quitarEspacios(casos.get(i)).length; j++) {
-//                numeros[i][j] = Integer.parseInt(ManejoStrings.quitarEspacios(casos.get(j)));
-//            }
+
+        String arrayStrings[] = ManejoStrings.quitarEspacios(entradaUsuario);
+        ArrayList<Integer> numeros = new ArrayList<>();
+        
+        for (int i = 0; i < arrayStrings.length; i++) {
+            numeros.add(Integer.parseInt(arrayStrings[i]));
         }
-
-//        String arrayStrings[] = ManejoStrings.quitarEspacios(entradaUsuario);
-//        ArrayList<Integer> numeros = new ArrayList<>();
-//        
-//        for (int i = 0; i < arrayStrings.length; i++) {
-//            numeros.add(Integer.parseInt(arrayStrings[i]));
-//        }
-//        if (numeros.get(0) > numeros.get(1)) {
-//            System.out.println(dividirFactoriales(numeros.get(0), numeros.get(1)));
-//        } else {
-//            System.out.println("Zopenco");
-//        }
-
+        
+        if (numeros.get(0) > numeros.get(1)) {
+            System.out.println(dividirFactoriales(numeros.get(0), numeros.get(1)));
+        } else {
+            System.out.println("Zopenco");
+        }
     }
 
     public int dividirFactoriales(int num1, int num2) {

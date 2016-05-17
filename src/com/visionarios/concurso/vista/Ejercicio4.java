@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @author Dam
  */
 public class Ejercicio4 {
-    public Ejercicio4(){
+    public Ejercicio4() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduzca los números: ");
         String entradaUsuario = sc.nextLine();
@@ -20,23 +20,14 @@ public class Ejercicio4 {
             numeros.add(Integer.parseInt(arrayStrings[i]));
         }
         
-       // System.out.println(calcularCapacidad(numeros.get(0), numeros.get(1), numeros.get(2)));
+        System.out.println(calcularCapacidad(numeros.get(0), numeros.get(1), numeros.get(2)));
     }
     
-//    public int calcularCapacidad(int cubos, int capacidad, int diferencia) {
-//        int resultado = 0;
-//        for (int i = 0; i < cubos; i++) {
-//            resultado += capacidad - (diferencia * i);
-//        }
-//        return resultado;
-//    }
-    
-   /* public int calcularCapacidad(int cubos, int capacidad, int diferencia) {
+    public int calcularCapacidad(int cubos, int capacidad, int diferencia) {
         int resultado = 0;
-        capacidad -= diferencia;
         if (cubos > 0) {
-            resultado += calcularCapacidad(cubos - 1, capacidad, diferencia) * ;
+            resultado = capacidad + calcularCapacidad(cubos - 1, capacidad - diferencia, diferencia);
         }
         return resultado;
-    }*/
+    }
 }
